@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction System</title>
+</head>
+<body
+    style="font-family: Arial, sans-serif; 
+    background-color: #f0f8ff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    height: 100vh; 
+    margin: 0; 
+    background-image: url('https://cdn.glitch.global/ad8d18c2-653a-4e31-b0f8-b301c6e77024/9690530-new-type-2-diabetes-drug-to-regulate.jpg?v=1720688729209'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;">
+    
+    <h1 style="color: yellow; text-align: center; margin-bottom: 20px;">
+        Diabetes Prediction System
+    </h1>
+
+    <form method="POST" action="/dpredict">
+        <table
+            style="border-collapse: collapse; width: 50%; margin: auto; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">Gender (1-Male, 2-Female, 3-Other)</td>
+                <td style="border: 1px solid #ddd; padding: 10px; background-color: #f9f9f9;">
+                    <input type="text" name="gender" style="width: 100%; padding: 8px; box-sizing: border-box;">
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">Age (1-80)</td>
+                <td style="border: 1px solid #ddd; padding: 10px; background-color: #f9f9f9;">
+                    <input type="text" name="age" style="width: 100%; padding: 8px; box-sizing: border-box;">
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">Hypertension (0/1)</td>
+                <td style="border: 1px solid #ddd; padding: 10px; background-color: #f9f9f9;">
+                    <input type="text" name="hypertension" style="width: 100%; padding: 8px; box-sizing: border-box;">
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">Heart disease (0/1)</td>
+                <td style="border: 1px solid #ddd; padding: 10px; background-color: #f9f9f9;">
+                    <input type="text" name="heartdisease" style="width: 100%; padding: 8px; box-sizing: border-box;">
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">Smoking history (1-never, 2-No Info, 3-current, 4-former, 5-ever, 6-not current)</td>
+                <td style="border: 1px solid #ddd; padding: 10px; background-color: #f9f9f9;">
+                    <input type="text" name="smokinghistory" style="width: 100%; padding: 8px; box-sizing: border-box;">
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">BMI (10-95)</td>
+                <td style="border: 1px solid #ddd; padding: 10px; background-color: #f9f9f9;">
+                    <input type="text" name="bmi" style="width: 100%; padding: 8px; box-sizing: border-box;">
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">HbA1c level (3.5-9.0)</td>
+                <td style="border: 1px solid #ddd; padding: 10px; background-color: #f9f9f9;">
+                    <input type="text" name="HbA1clevel" style="width: 100%; padding: 8px; box-sizing: border-box;">
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">Blood glucose level (80-300)</td>
+                <td style="border: 1px solid #ddd; padding: 10px; background-color: #f9f9f9;">
+                    <input type="text" name="bloodglucoselevel" style="width: 100%; padding: 8px; box-sizing: border-box;">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border: 1px solid #ddd; padding: 10px; text-align: center;">
+                    <input type="submit" value="Predict Diabetes"
+                        style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <!-- Replace {{ result }} with server-side rendering logic -->
+</body>
+</html>
